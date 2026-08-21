@@ -1,0 +1,10 @@
+.git/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest-temp/
+instance/
+data/*.zip
+data/*.csv
+*.egg-info/

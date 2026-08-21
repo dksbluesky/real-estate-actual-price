@@ -37,6 +37,12 @@ python scripts\sync_data.py --current --city 臺北市 --city 新北市
 
 重複匯入會依官方案件編號更新，不會重複累加。
 
+## Render 公開 PWA（六都展示版）
+
+Repository 已附 `render.yaml` 與 `Dockerfile`。在 Render 建立 Web Service 並連接此 repository 後，選擇 Free 方案；建置時會下載並匯入臺北市、新北市、桃園市、臺中市、臺南市、高雄市的當期官方資料，完成後 Render 會提供 HTTPS 網址，可由手機開啟並安裝為 PWA。
+
+Render 免費服務閒置 15 分鐘後會休眠，首次重新開啟約需一分鐘；每次重新部署都會重新下載六都資料。此公開展示版不提供 MCP endpoint，MCP 與完整本機資料庫仍於個人電腦使用。
+
 ## MCP server
 
 ```powershell

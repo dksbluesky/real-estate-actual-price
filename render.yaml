@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: real-estate-actual-price
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true

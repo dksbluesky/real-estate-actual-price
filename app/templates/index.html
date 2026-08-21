@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#174f3f">
+  <title>Real Estate Actual Price</title>
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <link rel="icon" href="/static/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header><div><p class="eyebrow">台灣官方實價登錄</p><h1>Real Estate Actual Price</h1><p>查成交紀錄，也看得懂資料涵蓋範圍。</p></div></header>
+  <main>
+    <section class="panel">
+      <form id="search-form">
+        <label>地址、社區或建物關鍵字<input id="q" name="q" placeholder="例如：信義路、國美館"></label>
+        <label>縣市<select id="city" name="city"><option value="">全部縣市</option></select></label>
+        <label>行政區<select id="district" name="district"><option value="">全部行政區</option></select></label>
+        <button type="submit">查詢</button>
+      </form>
+      <p id="coverage" class="muted">正在讀取本機資料狀態…</p>
+    </section>
+    <section id="stats" class="stats" aria-live="polite"></section>
+    <section class="panel">
+      <div class="section-title"><h2>成交紀錄</h2><span id="result-count"></span></div>
+      <div id="results" class="results"><p class="empty">輸入條件後查詢。</p></div>
+    </section>
+  </main>
+  <footer>資料來源：內政部地政司公開資料。僅供個人參考，不構成估價或交易建議。</footer>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
+
